@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from 'react';
+import Header from './componentes/Header';
+import Formulario from './componentes/Formulario';
+
 
 function App() {
+     
+const [cantidad, guardoCantidad] = useState(0);
+const [plazo, guardoPlazo] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+     < Header
+          titulos = 'Cotizador de prestamos'
+     />
+
+     <div className = "container">
+          <Formulario 
+               cantidad = {cantidad}
+               guardoCantidad = {guardoCantidad}
+               plazo = {plazo}
+               guardoPlazo = {guardoPlazo}
+          />
+     </div>
+     </Fragment>
   );
 }
 
 export default App;
+
