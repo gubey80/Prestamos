@@ -6,8 +6,8 @@ const  Formulario = ({cantidad, guardoCantidad, plazo, guardoPlazo}) => {
   <form>
     
     <div className="row">
-   {/*   {cantidad} 
-     {plazo}  */}
+    {cantidad} 
+     {plazo}  
     
    
         <div>
@@ -24,9 +24,8 @@ const  Formulario = ({cantidad, guardoCantidad, plazo, guardoPlazo}) => {
             <label>Plazo para Pagar</label>
             <select 
                 className="u-full-width"
-                onChange = {function(e){
-                    guardoPlazo(e.target.value)
-                    }
+                onChange = {e => guardoPlazo(e.target.value)
+                    
                 }
             >
                 <option value="">Seleccionar</option>
