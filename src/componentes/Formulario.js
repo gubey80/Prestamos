@@ -6,8 +6,8 @@ const  Formulario = ({cantidad, guardoCantidad, plazo, guardoPlazo}) => {
   <form>
     
     <div className="row">
-    {cantidad}
-    {plazo}
+   {/*   {cantidad} 
+     {plazo}  */}
     
    
         <div>
